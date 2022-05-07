@@ -14,7 +14,6 @@
  *  limitations under the License.
  */
 plugins {
-    id 'application'
     id 'java-gradle-plugin'
     id 'maven-publish'
 }
@@ -56,21 +55,8 @@ test {
     useJUnitPlatform()
 }
 
-ext {
-    javaMainClass = 'edu.cnm.deepdive.room.Main'
-}
-
-application {
-    mainClass = javaMainClass
-}
-
 jar {
     exclude('**/.keep')
-    manifest {
-        attributes(
-                'Main-Class': javaMainClass
-        )
-    }
 }
 
 artifacts {
@@ -89,11 +75,8 @@ publishing {
         }
     }
     publications {
-        //noinspection GroovyAssignabilityCheck
         mavenJava(MavenPublication) {
-            //noinspection GroovyAssignabilityCheck
             artifact jar
-            //noinspection GroovyAssignabilityCheck
         }
     }
 }
