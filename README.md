@@ -36,14 +36,14 @@ In the `app`-module level `build.gradle` file, include a `roomDdl` closure with 
 
     String specifying the path to the output file for the extracted DDL. Defaults to `"$projectDir/build/ddl/ddl.sql"`. Any directories included (implicitly or explicitly) will be created, if necessary; if such a directory cannot be created, or if the file itself cannot be written to, the task will fail with an exception. 
 
-    For example:
+For example:
 
-    ```groovy
-    roomDdl {
-        source "$projectDir/schemas/fully.qualified.database.class.name/1.json"
-        destination "$projectDir/../docs/sql/ddl.sql"
-    }
-    ```
+```groovy
+roomDdl {
+    source "$projectDir/schemas/fully.qualified.database.class.name/1.json"
+    destination "$projectDir/../docs/sql/ddl.sql"
+}
+```
 
 ### Execute the task
 
