@@ -81,7 +81,7 @@ publishing {
     repositories {
         maven {
             name = 'GitHubPackages'
-            url = "https://maven.pkg.github.com/ddc-java/public-maven-artifacts"
+            url = "https://maven.pkg.github.com/ddc-java/public-artifacts"
             credentials {
                 username = System.getenv('PACKAGE_PUBLISHER_USER')
                 password = System.getenv('PACKAGE_PUBLISHER_TOKEN')
