@@ -32,16 +32,15 @@ public class Plugin implements org.gradle.api.Plugin<Project> {
         .getExtensions()
         .create("roomDdl", Extension.class);
 
-    File source = project.file(extension.source().get());
-    File destination = project.file(extension.destination().get());
-
     project
         .getTasks()
         .register("extractRoomDdl", (task) ->
             task.doLast((t) -> {
+              File source = project.file(extension.getSource());
+              File destination = project.file(extension.getDestination());
               try (
                   InputStream input = new FileInputStream(source);
-                  PrintStream output = new PrintStream(destination)
+                  PrintStream output = prepareDestination(destination)
               ) {
                 Parser parser = new Parser();
                 parser.parse(input, output);
@@ -51,6 +50,15 @@ public class Plugin implements org.gradle.api.Plugin<Project> {
             })
         );
 
+  }
+
+  private PrintStream prepareDestination(File destination) throws IOException {
+    //noinspection ResultOfMethodCallIgnored
+    destination
+        .getCanonicalFile()
+        .getParentFile()
+        .mkdirs();
+    return new PrintStream(destination);
   }
 
 }

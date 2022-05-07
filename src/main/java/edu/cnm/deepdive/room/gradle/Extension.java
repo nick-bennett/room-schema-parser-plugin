@@ -17,15 +17,27 @@ package edu.cnm.deepdive.room.gradle;
 
 import org.gradle.api.provider.Property;
 
-public abstract class Extension {
+public class Extension {
 
   public static final String DEFAULT_DESTINATION = "build/ddl/ddl.sql";
 
-  public Extension() {
-    destination().convention(DEFAULT_DESTINATION);
+  private String source;
+  private String destination = DEFAULT_DESTINATION;
+
+  public String getSource() {
+    return source;
   }
 
-  abstract Property<String> source();
-  abstract Property<String> destination();
+  public void setSource(String source) {
+    this.source = source;
+  }
+
+  public String getDestination() {
+    return destination;
+  }
+
+  public void setDestination(String destination) {
+    this.destination = destination;
+  }
 
 }
