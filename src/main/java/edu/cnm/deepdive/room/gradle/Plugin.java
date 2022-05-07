@@ -23,18 +23,30 @@ import java.io.InputStream;
 import java.io.PrintStream;
 import org.gradle.api.Project;
 
+/**
+ * Implements a simple DDL parser/extractor Gradle plugin, intended for use in Android projects that
+ * use the Room ORM to define (or map to) and access a local SQLite database. If the
+ * {@code RoomDatabase} subclass in such project is configured to write a schema file (the default
+ * behavior), and a schema file location is specified in the {@code app}-level {@code build.gradle}
+ * file, a schema file will be written to the specific location when the database class is
+ * implemented by the Room annotation processor. In that file, the schema is represented in a JSON
+ * object, structured as shown in {@link Parser}.
+ */
 public class Plugin implements org.gradle.api.Plugin<Project> {
+
+  public static final String TASK_NAME = "extractRoomDdl";
+  public static final String CONFIGURATION_CLOSURE = "roomDdl";
 
   @Override
   public void apply(Project project) {
 
     Extension extension = project
         .getExtensions()
-        .create("roomDdl", Extension.class);
+        .create(CONFIGURATION_CLOSURE, Extension.class);
 
     project
         .getTasks()
-        .register("extractRoomDdl", (task) ->
+        .register(TASK_NAME, (task) ->
             task.doLast((t) -> {
               File source = project.file(extension.getSource());
               File destination = project.file(extension.getDestination());

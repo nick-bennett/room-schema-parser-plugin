@@ -2,6 +2,10 @@
 
 This project implements a Gradle plugin that extracts DDL from an Android Room SQLite database schema file.
 
+## Latest version
+
+v1.0.2
+
 ## Usage
 
 ### Include plugin in `build.gradle`
@@ -13,7 +17,7 @@ buildscript {
     // ...
     dependencies {
         // ... 
-        classpath 'edu.cnm.deepdive:room-schema-parser-plugin:1.0.1'
+        classpath 'edu.cnm.deepdive:room-schema-parser-plugin:1.0.2'
     }
 }
 ```
