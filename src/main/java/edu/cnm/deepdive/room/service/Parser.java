@@ -57,15 +57,15 @@ import java.util.regex.Pattern;
  *         ],
  *         ...
  *       },
- *       "views": [
- *         {
- *           "viewName": "...",
- *           "createSql": "..."
- *         },
- *         ...
- *       ],
  *       ...
- *     ]
+ *     ],
+ *     "views": [
+ *       {
+ *         "viewName": "...",
+ *         "createSql": "..."
+ *       },
+ *       ...
+ *     ],
  *   },
  *   ...
  * }
