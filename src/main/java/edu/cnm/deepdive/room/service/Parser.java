@@ -35,9 +35,9 @@ import java.util.regex.Pattern;
  * class is not a Java application (i.e. it does not provide an entry point {@code main} method),
  * but is suitable for consumption by many different types of applications or plugins.
  * <p>
- * The JSON schema produced by Room is structured as shown below. Properties that are not read by
- * this implementation (as well as repeated properties in arrays) are indicated by a "{@code ...}"
- * placeholder.
+ * The JSON schema produced by Room is structured as shown below. Property values, properties that
+ * are not read by this implementation, and repeated properties in arrays are indicated by
+ * "{@code ...}" placeholders.
  * </p>
  * <pre id="json-schema-structure"><code>
  * {
