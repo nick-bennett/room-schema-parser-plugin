@@ -63,7 +63,7 @@ roomDdl {
 ### Execute the task
 {: menu="Execute" }
 
-After loading any Gradle build script changes, the `extractRoomDdl` will be available for execution---either from the Gradle tool window of Android Studio or IntelliJ IDEA, or from from the command line:
+After loading any Gradle build script changes, the `extractRoomDdl` task will be available for execution---either from the Gradle tool window of Android Studio or IntelliJ IDEA, or from from the command line:
 
 ```bash
 ./gradlew extractRoomDdl
