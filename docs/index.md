@@ -16,7 +16,7 @@ This project implements a Gradle plugin that extracts DDL from an Android Room S
 ## Usage
 
 ### Declare dependency in `build.gradle`
-{: menu="Dependency" }
+{: menu="Declare" }
 
 Reference the plugin in the `dependencies` task of the `buildscript`, in the project-level `build.grade` file of an Android project, e.g.
 
