@@ -101,7 +101,7 @@ publishing {
 }
 
 pluginBundle {
-    website = 'https://github.com/ddc-java/room-schema-parser-plugin'
+    website = 'https://ddc-java.github.io/room-schema-parser-plugin/'
     vcsUrl = 'https://github.com/ddc-java/room-schema-parser-plugin.git'
     tags = ['android', 'room', 'schema', 'ddl']
 }

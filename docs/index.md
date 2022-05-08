@@ -5,7 +5,7 @@ This project implements a Gradle plugin that extracts DDL from an Android Room S
 ## Latest version
 {: menu="Version" }
 
-v1.0.2
+1.0.2
 
 ## Requirements
 
@@ -60,7 +60,7 @@ roomDdl {
 
 ### Execute the task
 
-After loading any Gradle build script changes, the `extractRoomDdl` will be available for execution&mdash;either from the Gradle tool window of Android Studio or IntelliJ IDEA, or from from the command line:
+After loading any Gradle build script changes, the `extractRoomDdl` will be available for execution---either from the Gradle tool window of Android Studio or IntelliJ IDEA, or from from the command line:
 
 ```bash
 ./gradlew extractRoomDdl
@@ -68,7 +68,7 @@ After loading any Gradle build script changes, the `extractRoomDdl` will be avai
 
 ## Javadocs
 
-[Overview of `edu.cnm.deepdive.room` package](api/)
+[`edu.cnm.deepdive.room` package overview](api/)
 
 ## Credits, copyrights, and license information
 {: menu="License" }
@@ -81,7 +81,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-<http://www.apache.org/licenses/LICENSE-2.0>
+> <http://www.apache.org/licenses/LICENSE-2.0>
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
