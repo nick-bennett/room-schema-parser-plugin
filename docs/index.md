@@ -66,6 +66,10 @@ After loading any Gradle build script changes, the `extractRoomDdl` will be avai
 ./gradlew extractRoomDdl
 ```
 
+## Javadocs
+
+[Overview of `edu.cnm.deepdive.room` package](api/)
+
 ## Credits, copyrights, and license information
 {: menu="License" }
 
