@@ -15,7 +15,8 @@ This project implements a Gradle plugin that extracts DDL from an Android Room S
 
 ## Usage
 
-### Include plugin in `build.gradle`
+### Declare dependency in `build.gradle`
+{: menu="Dependency" }
 
 Reference the plugin in the `dependencies` task of the `buildscript`, in the project-level `build.grade` file of an Android project, e.g.
 
@@ -30,6 +31,7 @@ buildscript {
 ```
 
 ### Configure the plugin
+{: menu="Configure" }
 
 In the `app`-module level `build.gradle` file, include a `roomDdl` closure with `source` and `destination` properties:
 
@@ -59,6 +61,7 @@ roomDdl {
 ```
 
 ### Execute the task
+{: menu="Execute" }
 
 After loading any Gradle build script changes, the `extractRoomDdl` will be available for execution---either from the Gradle tool window of Android Studio or IntelliJ IDEA, or from from the command line:
 

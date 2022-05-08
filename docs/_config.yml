@@ -9,6 +9,8 @@ author:
 
 heading_navigator:
   enabled: true
+  from: 2
+  to: 3
 page_navigator:
   enabled: false # Single page
 titles_from_headings:
