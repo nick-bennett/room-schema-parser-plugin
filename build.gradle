@@ -60,6 +60,7 @@ javadoc {
     options {
         links 'https://docs.oracle.com/en/java/javase/11/docs/api/'
         links 'https://docs.gradle.org/current/javadoc/'
+        links 'https://javadoc.io/doc/com.google.code.gson/gson/latest/'
     }
 }
 

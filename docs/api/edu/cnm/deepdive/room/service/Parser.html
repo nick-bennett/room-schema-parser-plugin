@@ -284,8 +284,8 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <pre class="methodSignature">public&nbsp;void&nbsp;parse&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/InputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">InputStream</a>&nbsp;input,
                   <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/OutputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">OutputStream</a>&nbsp;output)
            throws <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a>,
-                  com.google.gson.JsonIOException,
-                  com.google.gson.JsonSyntaxException</pre>
+                  <a href="https://javadoc.io/doc/com.google.code.gson/gson/latest/com.google.gson/com/google/gson/JsonIOException.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">JsonIOException</a>,
+                  <a href="https://javadoc.io/doc/com.google.code.gson/gson/latest/com.google.gson/com/google/gson/JsonSyntaxException.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">JsonSyntaxException</a></pre>
 <div class="block">Parses Room schema DDL from JSON content obtained from <code>input</code>, and writes the extracted
  DDL (with placeholders replaced by the appropriate table and view names) to <code>output</code>.</div>
 <dl>
@@ -295,9 +295,9 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - If unable to read from <code>input</code> or unable to write to
                              <code>output</code>.</dd>
-<dd><code>com.google.gson.JsonIOException</code> - If unable to read JSON from a <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html?is-external=true" title="class or interface in java.io" class="externalLink"><code>Reader</code></a> attached to
+<dd><code><a href="https://javadoc.io/doc/com.google.code.gson/gson/latest/com.google.gson/com/google/gson/JsonIOException.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">JsonIOException</a></code> - If unable to read JSON from a <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Reader.html?is-external=true" title="class or interface in java.io" class="externalLink"><code>Reader</code></a> attached to
                              <code>input</code>.</dd>
-<dd><code>com.google.gson.JsonSyntaxException</code> - If content read from <code>input</code> does not contain valid JSON.</dd>
+<dd><code><a href="https://javadoc.io/doc/com.google.code.gson/gson/latest/com.google.gson/com/google/gson/JsonSyntaxException.html?is-external=true" title="class or interface in com.google.gson" class="externalLink">JsonSyntaxException</a></code> - If content read from <code>input</code> does not contain valid JSON.</dd>
 </dl>
 </li>
 </ul>
