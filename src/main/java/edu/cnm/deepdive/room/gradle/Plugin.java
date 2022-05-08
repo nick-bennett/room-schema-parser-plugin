@@ -37,6 +37,14 @@ public class Plugin implements org.gradle.api.Plugin<Project> {
   public static final String TASK_NAME = "extractRoomDdl";
   public static final String CONFIGURATION_CLOSURE = "roomDdl";
 
+  /**
+   * Initializes this plugin instance. Currently, this plugin has no mutable state, nor any
+   * immutable state set on initialization, so this constructor does nothing; further, it is invoked
+   * only by Gradle itself.
+   */
+  public Plugin() {
+  }
+
   @Override
   public void apply(Project project) {
 

@@ -34,6 +34,9 @@ public class Index implements Streamable {
   @SerializedName("createSql")
   private String ddl;
 
+  private Index() {
+  }
+
   /**
    * Returns the name of the Room index (also the SQLite index) that this instance represents. This
    * value will generally be read from a {@code database.entities[].indices[].name} property in a

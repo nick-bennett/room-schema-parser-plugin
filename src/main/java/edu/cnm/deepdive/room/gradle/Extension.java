@@ -34,6 +34,13 @@ public class Extension {
   private String destination = DEFAULT_DESTINATION;
 
   /**
+   * Initializes this extension instance. This is only invoked by Gradle itself, not by the plugin
+   * or its consumers.
+   */
+  public Extension() {
+  }
+
+  /**
    * Returns the value of the <em>required</em> {@code source} property, as set in the
    * {@code roomDdl} section of {@code build.gradle}.
    */

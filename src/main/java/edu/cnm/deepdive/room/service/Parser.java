@@ -85,6 +85,13 @@ public class Parser {
   private static final String CODE_LINE_FORMAT = "%s;%n%n";
 
   /**
+   * Initializes this instance. Currently, since this class has no mutable state, nor even any
+   * {@code final} fields set on instance initialization, this constructor does nothing.
+   */
+  public Parser() {
+  }
+
+  /**
    * Parses Room schema DDL from JSON content obtained from {@code input}, and writes the extracted
    * DDL (with placeholders replaced by the appropriate table and view names) to {@code output}.
    *

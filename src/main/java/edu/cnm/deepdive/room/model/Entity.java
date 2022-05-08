@@ -42,6 +42,9 @@ public class Entity implements Streamable {
   @Expose
   private List<Index> indices = new LinkedList<>();
 
+  private Entity() {
+  }
+
   /**
    * Returns the name of the Room entity (also the SQLite table name) that this instance represents.
    * This value will generally be read from a {@code database.entities[].tableName} property in a

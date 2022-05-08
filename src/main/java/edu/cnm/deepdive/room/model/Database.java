@@ -39,6 +39,9 @@ public class Database implements Streamable {
   @Expose
   private List<View> views = new LinkedList<>();
 
+  private Database() {
+  }
+
   /**
    * Returns the {@link List} of {@link Entity} instances representing the tables in the database
    * schema, corresponding to the {@code database.entities} JSON property. The latter correspond, in
