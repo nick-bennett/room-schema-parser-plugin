@@ -5,7 +5,7 @@ This project implements a Gradle plugin that extracts DDL from an Android Room S
 ## Latest version
 {: menu="Version" }
 
-1.0.2
+1.0.0
 
 ## Requirements
 
@@ -25,7 +25,7 @@ buildscript {
     // ...
     dependencies {
         // ... 
-        classpath 'edu.cnm.deepdive:room-schema-parser-plugin:1.0.2'
+        classpath 'com.nickbenn:room-schema-parser-plugin:1.0.0'
     }
 }
 ```
@@ -71,14 +71,14 @@ After loading any Gradle build script changes, the `extractRoomDdl` task will be
 
 ## Javadocs
 
-[`edu.cnm.deepdive.room` package overview](api/)
+[`com.nickbenn.room` package overview](api/)
 
 ## Credits, copyrights, and license information
 {: menu="License" }
 
 Written by Nicholas Bennett. 
 
-&copy; 2022 CNM Ingenuity, Inc.
+&copy; 2022 Nicholas Bennett.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

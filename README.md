@@ -4,7 +4,7 @@ This project implements a Gradle plugin that extracts DDL from an Android Room S
 
 ## Latest version
 
-1.0.2
+1.0.0
 
 ## Requirements
 
@@ -19,7 +19,7 @@ See the complete documentation at <https://ddc-java.github.io/room-schema-parser
 
 Written by Nicholas Bennett. 
 
-&copy; 2022 CNM Ingenuity, Inc.
+&copy; 2022 Nicholas Bennett.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
