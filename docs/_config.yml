@@ -6,6 +6,7 @@ description: "A Gradle plugin that can be used to parse & extract the DDL from a
 author:
   name: "Nick Bennett"
   email: "nick@nickbenn.com"
+  copyright: true
 
 heading_navigator:
   enabled: true
