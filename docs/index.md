@@ -1,3 +1,8 @@
+---
+title: Documentation
+description: Simple instructions for using the plugin.
+---
+
 ## Overview
 
 This project implements a Gradle plugin that extracts DDL from an Android Room SQLite database schema file.
@@ -73,14 +78,7 @@ After loading any Gradle build script changes, the `extractRoomDdl` task will be
 
 [`com.nickbenn.room` package overview](api/)
 
-## Credits, copyrights, and license information
-{: menu="License" }
-
-### Website
-
-Text content &copy; 2022 Nicholas Bennett. All rights reserved.
-
-### Source & compiled code and build scripts
+## License
 
 &copy; 2022 Nicholas Bennett.
 
