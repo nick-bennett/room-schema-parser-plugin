@@ -17,7 +17,11 @@ See the complete documentation at <https://ddc-java.github.io/room-schema-parser
 
 ## Credits, copyrights, and license information
 
-Written by Nicholas Bennett. 
+### Documentation
+
+&copy; 2022 Nicholas Bennett. All rights reserved.
+
+### Source & compiled code and build scripts
 
 &copy; 2022 Nicholas Bennett.
 
