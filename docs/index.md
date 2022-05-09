@@ -76,9 +76,9 @@ After loading any Gradle build script changes, the `extractRoomDdl` task will be
 ## Credits, copyrights, and license information
 {: menu="License" }
 
-### Website content
+### Website
 
-&copy; 2022 Nicholas Bennett. All rights reserved.
+Text content &copy; 2022 Nicholas Bennett. All rights reserved.
 
 ### Source & compiled code and build scripts
 
