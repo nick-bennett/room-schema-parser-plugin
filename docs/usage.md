@@ -2,7 +2,7 @@
 title: Usage
 description: Simple instructions for using the plugin.
 nav_order: 2
-last_modified_date: {{ "now" }}
+last_modified_date: 2022-05-10 12:40:00-0600
 ---
 
 ## Declare dependency in `build.gradle`

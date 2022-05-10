@@ -2,7 +2,7 @@
 title: License
 description: Credits, copyrights, and license information.
 nav_order: 3
-last_modified_date: {{ "now" }}
+last_modified_date: 2022-05-10 12:40:00-0600
 ---
 
 &copy; 2022 Nicholas Bennett.
