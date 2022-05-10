@@ -6,7 +6,7 @@ description: "A Gradle plugin that can be used to parse & extract the DDL from a
 titles_from_headings:
   enabled: false
 
-baseurl: "/room-schema-parser=plugin" # the subpath of your site, e.g. /blog
+baseurl: "/room-schema-parser-plugin" # the subpath of your site, e.g. /blog
 url: "https://nick-bennett.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
