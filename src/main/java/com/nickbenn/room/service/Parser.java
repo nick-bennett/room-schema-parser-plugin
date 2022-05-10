@@ -32,6 +32,7 @@ import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.Reader;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 /**
  * Provides a simple parsing service that extracts DDL from a Room-generated JSON schema file. This
@@ -83,9 +84,10 @@ import java.util.regex.Pattern;
  */
 public class Parser {
 
-  private static final Pattern COMMENT_LINE_PATTERN = Pattern.compile("^\\s*--\\s.*$");
-  private static final String COMMENT_LINE_FORMAT = "%s%n%n";
-  private static final String CODE_LINE_FORMAT = "%s;%n%n";
+  private static final Pattern COMMENT_STATEMENT_PATTERN = Pattern.compile("^\\s*--\\s.*$");
+  private static final String COMMENT_STATEMENT_FORMAT = "%s";
+  private static final String CODE_STATEMENT_FORMAT = "%s;";
+  private static final String STATEMENT_SEPARATOR = String.format("%n%n");
 
   /**
    * Initializes this instance. Currently, since this class has no mutable state, nor even any
@@ -115,22 +117,23 @@ public class Parser {
         Reader reader = new InputStreamReader(input);
         PrintWriter writer = new PrintWriter(output)
     ) {
-      gson
+      String content = gson
           .fromJson(reader, Schema.class)
           .stream()
           .map(this::terminate)
-          .forEach(writer::print);
+          .collect(Collectors.joining(STATEMENT_SEPARATOR));
+      writer.print(content);
     }
   }
 
   private String terminate(String statement) {
     return String
         .format(
-            COMMENT_LINE_PATTERN
+            COMMENT_STATEMENT_PATTERN
                 .matcher(statement)
                 .matches()
-                ? COMMENT_LINE_FORMAT
-                : CODE_LINE_FORMAT,
+                ? COMMENT_STATEMENT_FORMAT
+                : CODE_STATEMENT_FORMAT,
             statement
         );
   }
