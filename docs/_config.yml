@@ -54,7 +54,7 @@ heading_anchors: true
 # Aux links for the upper right navigation
 aux_links:
   "Javadocs":
-    - "/api/"
+    - "/room-schema-parser-plugin/api/"
   "GitHub":
     - "//github.com/nick-bennett/room-schema-parser-plugin"
 
