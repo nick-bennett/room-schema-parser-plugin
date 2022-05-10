@@ -61,10 +61,10 @@ roomDdl {
 
 ## Execute the task
 
-After loading any Gradle build script changes, the `extractRoomDdl` task will be available for execution---either from the Gradle tool window of Android Studio or IntelliJ IDEA, or from from the command line:
+After loading the Gradle build script changes, the `extractRoomDdl` task will be available for execution---either from the Gradle tool window of Android Studio or IntelliJ IDEA, or from from the command line:
 
 ```bash
 ./gradlew extractRoomDdl
 ```
 
-Alternatively, by modifying `build.gradle` or making the appropriate selections in the Gradle tool window of Android, `extractRoomDdl` can be set to run before or after another Gradle task. However, this isn't recommended in most cases, since this will generally result in unnecessary re-execution of the `extractRoomDdl` task if the output file has been modified---e.g. by using the **Code/Reformat Code** option to format the DDL.
+Alternatively, by modifying `build.gradle` or making the appropriate selections in the Gradle tool window of Android, `extractRoomDdl` can be set to run automatically, before or after another Gradle task. However, this isn't recommended in most cases, since this will generally result in unnecessary re-execution of the `extractRoomDdl` task if the output file has been modified---e.g. by using the **Code/Reformat Code** option to format the DDL.
