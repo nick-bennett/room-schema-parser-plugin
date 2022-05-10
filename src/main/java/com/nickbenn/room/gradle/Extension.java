@@ -15,67 +15,85 @@
  */
 package com.nickbenn.room.gradle;
 
+import javax.inject.Inject;
+import org.gradle.api.Project;
+import org.gradle.api.file.RegularFileProperty;
+import org.gradle.api.model.ObjectFactory;
+import org.gradle.api.tasks.InputFile;
+import org.gradle.api.tasks.OutputFile;
+
 /**
- * Provides configuration properties for {@link Plugin}, and consequently for the `extractRoomDdl`
- * Gradle task. Currently, these properties are minimal, supporting only the specification of
- * {@code source} and {@code destination} properties; these are set in the {@code roomDdl} section
- * of {@code build.gradle}.
- *
- * @see Plugin#TASK_NAME
- * @see Plugin#CONFIGURATION_CLOSURE
+ * Provides configuration properties for the {@code extractRoomDdl} Gradle task. Currently, these
+ * properties are minimal, supporting only the specification of {@code source} and
+ * {@code destination} properties; these are set in the {@code roomDdl} section of
+ * {@code build.gradle}.
  */
-@SuppressWarnings({"JavadocDeclaration", "unused"})
+@SuppressWarnings("JavadocDeclaration")
 public class Extension {
 
   /** Default output file path, relative to the consumer project's {@code build.gradle} location. */
   public static final String DEFAULT_DESTINATION = "build/ddl/ddl.sql";
 
-  private String source;
-  private String destination = DEFAULT_DESTINATION;
+  private final Project project;
+  private final RegularFileProperty source;
+  private final RegularFileProperty destination;
 
   /**
    * Initializes this extension instance. This is only invoked by Gradle itself, not by the plugin
    * or its consumers.
+   *
+   * @param project {@link Project} instance injected by Gradle.
    */
-  public Extension() {
+  @Inject
+  public Extension(Project project) {
+    this.project = project;
+    ObjectFactory factory = project.getObjects();
+    source = factory.fileProperty();
+    destination = factory.fileProperty();
+    destination
+        .convention(
+            project
+                .getLayout()
+                .getProjectDirectory()
+                .file(DEFAULT_DESTINATION)
+        );
   }
 
   /**
    * Returns the value of the <em>required</em> {@code source} property, as set in the
    * {@code roomDdl} section of {@code build.gradle}.
    */
-  public String getSource() {
+  public RegularFileProperty getSource() {
     return source;
   }
 
   /**
-   * Sets the value of the {@code source} property. This will be interpreted relative to the
-   * directory where the consuming {@code build.gradle} is located. If no file exists at the
-   * specified location, execution of the {@code extractRoomDdl} task will fail.
+   * Sets the {@code source} property to the value returned from
+   * {@link Project#file(Object) project.file(sourceStr)}.
    *
-   * @param source
+   * @param sourceStr
    */
-  public void setSource(String source) {
-    this.source = source;
+  public void setSource(String sourceStr) {
+    this.source.set(project.file(sourceStr));
   }
 
   /**
    * Returns the value of the {@code destination} property, as set in the {@code roomDdl} section of
-   * {@code build.gradle}. If not set, the value of {@link #DEFAULT_DESTINATION} is used.
+   * {@code build.gradle}. If not set, then the default value is read from
+   * {@link #DEFAULT_DESTINATION}.
    */
-  public String getDestination() {
+  public RegularFileProperty getDestination() {
     return destination;
   }
 
   /**
-   * Sets the value of the {@code destination} property. This will be interpreted relative to the
-   * directory where the consuming {@code build.gradle} is located. If this value includes any
-   * directories that don't exist, the {@code extractRoomDdl} task will attempt to create them.
+   * Sets the {@code destination} property to the value returned from
+   * {@link Project#file(Object) project.file(destinationStr)}.
    *
-   * @param destination
+   * @param destinationStr
    */
-  public void setDestination(String destination) {
-    this.destination = destination;
+  public void setDestination(String destinationStr) {
+    this.destination.set(project.file(destinationStr));
   }
 
 }

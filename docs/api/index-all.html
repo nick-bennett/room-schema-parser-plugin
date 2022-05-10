@@ -120,7 +120,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/OutputStream.html?is-external=true" title="class or interface in java.io" class="externalLink"><code>OutputStream</code></a>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="com/nickbenn/room/gradle/Plugin.html#CONFIGURATION_CLOSURE">CONFIGURATION_CLOSURE</a></span> - Static variable in class com.nickbenn.room.gradle.<a href="com/nickbenn/room/gradle/Plugin.html" title="class in com.nickbenn.room.gradle">Plugin</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Name of the configuration section where the task properties can be set.</div>
+</dd>
 </dl>
 <a id="I:D">
 <!--   -->
@@ -147,13 +149,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><a href="com/nickbenn/room/gradle/Extension.html" title="class in com.nickbenn.room.gradle"><span class="typeNameLink">Extension</span></a> - Class in <a href="com/nickbenn/room/gradle/package-summary.html">com.nickbenn.room.gradle</a></dt>
 <dd>
-<div class="block">Provides configuration properties for <a href="com/nickbenn/room/gradle/Plugin.html" title="class in com.nickbenn.room.gradle"><code>Plugin</code></a>, and consequently for the `extractRoomDdl`
- Gradle task.</div>
+<div class="block">Provides configuration properties for the <code>extractRoomDdl</code> Gradle task.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="com/nickbenn/room/gradle/Extension.html#%3Cinit%3E()">Extension()</a></span> - Constructor for class com.nickbenn.room.gradle.<a href="com/nickbenn/room/gradle/Extension.html" title="class in com.nickbenn.room.gradle">Extension</a></dt>
+<dt><span class="memberNameLink"><a href="com/nickbenn/room/gradle/Extension.html#%3Cinit%3E(org.gradle.api.Project)">Extension(Project)</a></span> - Constructor for class com.nickbenn.room.gradle.<a href="com/nickbenn/room/gradle/Extension.html" title="class in com.nickbenn.room.gradle">Extension</a></dt>
 <dd>
 <div class="block">Initializes this extension instance.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="com/nickbenn/room/gradle/Task.html#extract()">extract()</a></span> - Method in class com.nickbenn.room.gradle.<a href="com/nickbenn/room/gradle/Task.html" title="class in com.nickbenn.room.gradle">Task</a></dt>
+<dd>&nbsp;</dd>
 </dl>
 <a id="I:G">
 <!--   -->
@@ -185,6 +188,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Returns the value of the <code>destination</code> property, as set in the <code>roomDdl</code> section of
  <code>build.gradle</code>.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="com/nickbenn/room/gradle/Task.html#getDestination()">getDestination()</a></span> - Method in class com.nickbenn.room.gradle.<a href="com/nickbenn/room/gradle/Task.html" title="class in com.nickbenn.room.gradle">Task</a></dt>
+<dd>
+<div class="block">Returns the value of the <code>destination</code> property.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="com/nickbenn/room/model/Database.html#getEntities()">getEntities()</a></span> - Method in class com.nickbenn.room.model.<a href="com/nickbenn/room/model/Database.html" title="class in com.nickbenn.room.model">Database</a></dt>
 <dd>
 <div class="block">Returns the <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink"><code>List</code></a> of <a href="com/nickbenn/room/model/Entity.html" title="class in com.nickbenn.room.model"><code>Entity</code></a> instances representing the tables in the database
@@ -212,6 +219,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Returns the value of the <em>required</em> <code>source</code> property, as set in the
  <code>roomDdl</code> section of <code>build.gradle</code>.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="com/nickbenn/room/gradle/Task.html#getSource()">getSource()</a></span> - Method in class com.nickbenn.room.gradle.<a href="com/nickbenn/room/gradle/Task.html" title="class in com.nickbenn.room.gradle">Task</a></dt>
+<dd>
+<div class="block">Returns the value of the <em>required</em> <code>source</code> property.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="com/nickbenn/room/model/Database.html#getVersion()">getVersion()</a></span> - Method in class com.nickbenn.room.model.<a href="com/nickbenn/room/model/Database.html" title="class in com.nickbenn.room.model">Database</a></dt>
 <dd>
@@ -299,7 +310,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="com/nickbenn/room/gradle/Extension.html#setDestination(java.lang.String)">setDestination(String)</a></span> - Method in class com.nickbenn.room.gradle.<a href="com/nickbenn/room/gradle/Extension.html" title="class in com.nickbenn.room.gradle">Extension</a></dt>
 <dd>
-<div class="block">Sets the value of the <code>destination</code> property.</div>
+<div class="block">Sets the <code>destination</code> property to the value returned from
+ <a href="https://docs.gradle.org/current/javadoc/org/gradle/api/Project.html?is-external=true#file(java.lang.Object)" title="class or interface in org.gradle.api" class="externalLink"><code>project.file(destinationStr)</code></a>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="com/nickbenn/room/model/Database.html#setEntities(java.util.List)">setEntities(List&lt;Entity&gt;)</a></span> - Method in class com.nickbenn.room.model.<a href="com/nickbenn/room/model/Database.html" title="class in com.nickbenn.room.model">Database</a></dt>
 <dd>
@@ -325,7 +337,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="com/nickbenn/room/gradle/Extension.html#setSource(java.lang.String)">setSource(String)</a></span> - Method in class com.nickbenn.room.gradle.<a href="com/nickbenn/room/gradle/Extension.html" title="class in com.nickbenn.room.gradle">Extension</a></dt>
 <dd>
-<div class="block">Sets the value of the <code>source</code> property.</div>
+<div class="block">Sets the <code>source</code> property to the value returned from
+ <a href="https://docs.gradle.org/current/javadoc/org/gradle/api/Project.html?is-external=true#file(java.lang.Object)" title="class or interface in org.gradle.api" class="externalLink"><code>project.file(sourceStr)</code></a>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="com/nickbenn/room/model/Database.html#setVersion(int)">setVersion(int)</a></span> - Method in class com.nickbenn.room.model.<a href="com/nickbenn/room/model/Database.html" title="class in com.nickbenn.room.model">Database</a></dt>
 <dd>
@@ -378,8 +391,18 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </a>
 <h2 class="title">T</h2>
 <dl>
-<dt><span class="memberNameLink"><a href="com/nickbenn/room/gradle/Plugin.html#TASK_NAME">TASK_NAME</a></span> - Static variable in class com.nickbenn.room.gradle.<a href="com/nickbenn/room/gradle/Plugin.html" title="class in com.nickbenn.room.gradle">Plugin</a></dt>
+<dt><a href="com/nickbenn/room/gradle/Task.html" title="class in com.nickbenn.room.gradle"><span class="typeNameLink">Task</span></a> - Class in <a href="com/nickbenn/room/gradle/package-summary.html">com.nickbenn.room.gradle</a></dt>
+<dd>
+<div class="block">Implements a Gradle task capable of extracting and replacing placeholders in DDL statements
+ embedded in the JSON database schema files created by the Room ORM, and writing the results to a
+ a SQL script file.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="com/nickbenn/room/gradle/Task.html#%3Cinit%3E()">Task()</a></span> - Constructor for class com.nickbenn.room.gradle.<a href="com/nickbenn/room/gradle/Task.html" title="class in com.nickbenn.room.gradle">Task</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="com/nickbenn/room/gradle/Plugin.html#TASK_NAME">TASK_NAME</a></span> - Static variable in class com.nickbenn.room.gradle.<a href="com/nickbenn/room/gradle/Plugin.html" title="class in com.nickbenn.room.gradle">Plugin</a></dt>
+<dd>
+<div class="block">Name of the Gradle task added by this plugin to the consumer project.</div>
+</dd>
 </dl>
 <a id="I:V">
 <!--   -->

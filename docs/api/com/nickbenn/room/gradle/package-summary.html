@@ -113,8 +113,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <tr class="altColor">
 <th class="colFirst" scope="row"><a href="Extension.html" title="class in com.nickbenn.room.gradle">Extension</a></th>
 <td class="colLast">
-<div class="block">Provides configuration properties for <a href="Plugin.html" title="class in com.nickbenn.room.gradle"><code>Plugin</code></a>, and consequently for the `extractRoomDdl`
- Gradle task.</div>
+<div class="block">Provides configuration properties for the <code>extractRoomDdl</code> Gradle task.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -122,6 +121,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <td class="colLast">
 <div class="block">Implements a simple DDL parser/extractor Gradle plugin, intended for use in Android projects that
  use the Room ORM to define (or map to) and access a local SQLite database.</div>
+</td>
+</tr>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="Task.html" title="class in com.nickbenn.room.gradle">Task</a></th>
+<td class="colLast">
+<div class="block">Implements a Gradle task capable of extracting and replacing placeholders in DDL statements
+ embedded in the JSON database schema files created by the Room ORM, and writing the results to a
+ a SQL script file.</div>
 </td>
 </tr>
 </tbody>

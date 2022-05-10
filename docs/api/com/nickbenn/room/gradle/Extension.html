@@ -132,15 +132,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public class <span class="typeNameLabel">Extension</span>
 extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
-<div class="block">Provides configuration properties for <a href="Plugin.html" title="class in com.nickbenn.room.gradle"><code>Plugin</code></a>, and consequently for the `extractRoomDdl`
- Gradle task. Currently, these properties are minimal, supporting only the specification of
- <code>source</code> and <code>destination</code> properties; these are set in the <code>roomDdl</code> section
- of <code>build.gradle</code>.</div>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="Plugin.html#TASK_NAME"><code>Plugin.TASK_NAME</code></a>, 
-<a href="Plugin.html#CONFIGURATION_CLOSURE"><code>Plugin.CONFIGURATION_CLOSURE</code></a></dd>
-</dl>
+<div class="block">Provides configuration properties for the <code>extractRoomDdl</code> Gradle task. Currently, these
+ properties are minimal, supporting only the specification of <code>source</code> and
+ <code>destination</code> properties; these are set in the <code>roomDdl</code> section of
+ <code>build.gradle</code>.</div>
 </li>
 </ul>
 </div>
@@ -186,7 +181,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E()">Extension</a></span>()</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(org.gradle.api.Project)">Extension</a></span>&#8203;(<a href="https://docs.gradle.org/current/javadoc/org/gradle/api/Project.html?is-external=true" title="class or interface in org.gradle.api" class="externalLink">Project</a>&nbsp;project)</code></th>
 <td class="colLast">
 <div class="block">Initializes this extension instance.</div>
 </td>
@@ -210,7 +205,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<td class="colFirst"><code><a href="https://docs.gradle.org/current/javadoc/org/gradle/api/file/RegularFileProperty.html?is-external=true" title="class or interface in org.gradle.api.file" class="externalLink">RegularFileProperty</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDestination()">getDestination</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the value of the <code>destination</code> property, as set in the <code>roomDdl</code> section of
@@ -218,7 +213,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<td class="colFirst"><code><a href="https://docs.gradle.org/current/javadoc/org/gradle/api/file/RegularFileProperty.html?is-external=true" title="class or interface in org.gradle.api.file" class="externalLink">RegularFileProperty</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSource()">getSource</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the value of the <em>required</em> <code>source</code> property, as set in the
@@ -227,16 +222,18 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setDestination(java.lang.String)">setDestination</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;destination)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setDestination(java.lang.String)">setDestination</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;destinationStr)</code></th>
 <td class="colLast">
-<div class="block">Sets the value of the <code>destination</code> property.</div>
+<div class="block">Sets the <code>destination</code> property to the value returned from
+ <a href="https://docs.gradle.org/current/javadoc/org/gradle/api/Project.html?is-external=true#file(java.lang.Object)" title="class or interface in org.gradle.api" class="externalLink"><code>project.file(destinationStr)</code></a>.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSource(java.lang.String)">setSource</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;source)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSource(java.lang.String)">setSource</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;sourceStr)</code></th>
 <td class="colLast">
-<div class="block">Sets the value of the <code>source</code> property.</div>
+<div class="block">Sets the <code>source</code> property to the value returned from
+ <a href="https://docs.gradle.org/current/javadoc/org/gradle/api/Project.html?is-external=true#file(java.lang.Object)" title="class or interface in org.gradle.api" class="externalLink"><code>project.file(sourceStr)</code></a>.</div>
 </td>
 </tr>
 </table>
@@ -287,15 +284,20 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a id="&lt;init&gt;()">
+<a id="&lt;init&gt;(org.gradle.api.Project)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>Extension</h4>
-<pre>public&nbsp;Extension()</pre>
+<pre>@Inject
+public&nbsp;Extension&#8203;(<a href="https://docs.gradle.org/current/javadoc/org/gradle/api/Project.html?is-external=true" title="class or interface in org.gradle.api" class="externalLink">Project</a>&nbsp;project)</pre>
 <div class="block">Initializes this extension instance. This is only invoked by Gradle itself, not by the plugin
  or its consumers.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>project</code> - <a href="https://docs.gradle.org/current/javadoc/org/gradle/api/Project.html?is-external=true" title="class or interface in org.gradle.api" class="externalLink"><code>Project</code></a> instance injected by Gradle.</dd>
+</dl>
 </li>
 </ul>
 </li>
@@ -314,7 +316,7 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <ul class="blockList">
 <li class="blockList">
 <h4>getSource</h4>
-<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getSource()</pre>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.gradle.org/current/javadoc/org/gradle/api/file/RegularFileProperty.html?is-external=true" title="class or interface in org.gradle.api.file" class="externalLink">RegularFileProperty</a>&nbsp;getSource()</pre>
 <div class="block">Returns the value of the <em>required</em> <code>source</code> property, as set in the
  <code>roomDdl</code> section of <code>build.gradle</code>.</div>
 </li>
@@ -325,13 +327,12 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <ul class="blockList">
 <li class="blockList">
 <h4>setSource</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;setSource&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;source)</pre>
-<div class="block">Sets the value of the <code>source</code> property. This will be interpreted relative to the
- directory where the consuming <code>build.gradle</code> is located. If no file exists at the
- specified location, execution of the <code>extractRoomDdl</code> task will fail.</div>
+<pre class="methodSignature">public&nbsp;void&nbsp;setSource&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;sourceStr)</pre>
+<div class="block">Sets the <code>source</code> property to the value returned from
+ <a href="https://docs.gradle.org/current/javadoc/org/gradle/api/Project.html?is-external=true#file(java.lang.Object)" title="class or interface in org.gradle.api" class="externalLink"><code>project.file(sourceStr)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>source</code> - </dd>
+<dd><code>sourceStr</code> - </dd>
 </dl>
 </li>
 </ul>
@@ -341,9 +342,10 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <ul class="blockList">
 <li class="blockList">
 <h4>getDestination</h4>
-<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getDestination()</pre>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.gradle.org/current/javadoc/org/gradle/api/file/RegularFileProperty.html?is-external=true" title="class or interface in org.gradle.api.file" class="externalLink">RegularFileProperty</a>&nbsp;getDestination()</pre>
 <div class="block">Returns the value of the <code>destination</code> property, as set in the <code>roomDdl</code> section of
- <code>build.gradle</code>. If not set, the value of <a href="#DEFAULT_DESTINATION"><code>DEFAULT_DESTINATION</code></a> is used.</div>
+ <code>build.gradle</code>. If not set, then the default value is read from
+ <a href="#DEFAULT_DESTINATION"><code>DEFAULT_DESTINATION</code></a>.</div>
 </li>
 </ul>
 <a id="setDestination(java.lang.String)">
@@ -352,13 +354,12 @@ extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/ja
 <ul class="blockListLast">
 <li class="blockList">
 <h4>setDestination</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;setDestination&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;destination)</pre>
-<div class="block">Sets the value of the <code>destination</code> property. This will be interpreted relative to the
- directory where the consuming <code>build.gradle</code> is located. If this value includes any
- directories that don't exist, the <code>extractRoomDdl</code> task will attempt to create them.</div>
+<pre class="methodSignature">public&nbsp;void&nbsp;setDestination&#8203;(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;destinationStr)</pre>
+<div class="block">Sets the <code>destination</code> property to the value returned from
+ <a href="https://docs.gradle.org/current/javadoc/org/gradle/api/Project.html?is-external=true#file(java.lang.Object)" title="class or interface in org.gradle.api" class="externalLink"><code>project.file(destinationStr)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>destination</code> - </dd>
+<dd><code>destinationStr</code> - </dd>
 </dl>
 </li>
 </ul>
