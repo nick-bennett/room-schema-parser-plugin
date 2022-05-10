@@ -148,7 +148,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 extends <a href="https://docs.gradle.org/current/javadoc/org/gradle/api/DefaultTask.html?is-external=true" title="class or interface in org.gradle.api" class="externalLink">DefaultTask</a></pre>
 <div class="block">Implements a Gradle task capable of extracting and replacing placeholders in DDL statements
  embedded in the JSON database schema files created by the Room ORM, and writing the results to a
- a SQL script file.
+ SQL script file.
  <p>If the <code>RoomDatabase</code> subclass in an Android project that uses Room is configured to
  write a schema file (the default behavior), and a schema file location is specified in the
  <code>app</code>-level <code>build.gradle</code> file, a schema file will be written to the specific
@@ -159,7 +159,7 @@ extends <a href="https://docs.gradle.org/current/javadoc/org/gradle/api/DefaultT
  <a href="#getSource()"><code>getSource()</code></a>), replaces the <code>${TABLE_NAME}</code> and <code>${VIEW_NAME}</code>
  placeholders, and writes properly terminated DDL SQL statements to the output file specified in
  the <code>destination</code> property (which defaults to the value of
- <a href="Extension.html#DEFAULT_DESTINATION"><code>Extension.DEFAULT_DESTINATION</code></a>).</p></div>
+ <a href="Extension.html#DEFAULT_DESTINATION"><code>Extension.DEFAULT_DESTINATION</code></a>), and returned from <a href="#getDestination()"><code>getDestination()</code></a>.</p></div>
 </li>
 </ul>
 </div>
@@ -238,7 +238,12 @@ extends <a href="https://docs.gradle.org/current/javadoc/org/gradle/api/DefaultT
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#extract()">extract</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Parses the contents of the file referenced by the <a href="#getSource()"><code>getSource()</code></a> return value, replaces
+ the embedded placeholders with the appropriate table and view names, terminates each statement
+ with the semicolon (`;`) character and two line breaks, and writes the result to the location
+ referenced by <a href="#getDestination()"><code>getDestination()</code></a>.</div>
+</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>abstract <a href="https://docs.gradle.org/current/javadoc/org/gradle/api/file/RegularFileProperty.html?is-external=true" title="class or interface in org.gradle.api.file" class="externalLink">RegularFileProperty</a></code></td>
@@ -347,6 +352,10 @@ public abstract&nbsp;<a href="https://docs.gradle.org/current/javadoc/org/gradle
 <li class="blockList">
 <h4>extract</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;extract()</pre>
+<div class="block">Parses the contents of the file referenced by the <a href="#getSource()"><code>getSource()</code></a> return value, replaces
+ the embedded placeholders with the appropriate table and view names, terminates each statement
+ with the semicolon (`;`) character and two line breaks, and writes the result to the location
+ referenced by <a href="#getDestination()"><code>getDestination()</code></a>.</div>
 </li>
 </ul>
 </li>

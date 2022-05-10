@@ -156,7 +156,12 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Initializes this extension instance.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="com/nickbenn/room/gradle/Task.html#extract()">extract()</a></span> - Method in class com.nickbenn.room.gradle.<a href="com/nickbenn/room/gradle/Task.html" title="class in com.nickbenn.room.gradle">Task</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Parses the contents of the file referenced by the <a href="com/nickbenn/room/gradle/Task.html#getSource()"><code>Task.getSource()</code></a> return value, replaces
+ the embedded placeholders with the appropriate table and view names, terminates each statement
+ with the semicolon (`;`) character and two line breaks, and writes the result to the location
+ referenced by <a href="com/nickbenn/room/gradle/Task.html#getDestination()"><code>Task.getDestination()</code></a>.</div>
+</dd>
 </dl>
 <a id="I:G">
 <!--   -->
@@ -395,7 +400,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Implements a Gradle task capable of extracting and replacing placeholders in DDL statements
  embedded in the JSON database schema files created by the Room ORM, and writing the results to a
- a SQL script file.</div>
+ SQL script file.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="com/nickbenn/room/gradle/Task.html#%3Cinit%3E()">Task()</a></span> - Constructor for class com.nickbenn.room.gradle.<a href="com/nickbenn/room/gradle/Task.html" title="class in com.nickbenn.room.gradle">Task</a></dt>
 <dd>&nbsp;</dd>

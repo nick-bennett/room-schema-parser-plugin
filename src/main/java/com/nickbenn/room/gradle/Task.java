@@ -31,7 +31,7 @@ import org.gradle.api.tasks.TaskAction;
 /**
  * Implements a Gradle task capable of extracting and replacing placeholders in DDL statements
  * embedded in the JSON database schema files created by the Room ORM, and writing the results to a
- * a SQL script file.
+ * SQL script file.
  * <p>If the {@code RoomDatabase} subclass in an Android project that uses Room is configured to
  * write a schema file (the default behavior), and a schema file location is specified in the
  * {@code app}-level {@code build.gradle} file, a schema file will be written to the specific
@@ -42,7 +42,7 @@ import org.gradle.api.tasks.TaskAction;
  * {@link #getSource()}), replaces the {@code ${TABLE_NAME}} and {@code ${VIEW_NAME}}
  * placeholders, and writes properly terminated DDL SQL statements to the output file specified in
  * the {@code destination} property (which defaults to the value of
- * {@link Extension#DEFAULT_DESTINATION}).</p>
+ * {@link Extension#DEFAULT_DESTINATION}), and returned from {@link #getDestination()}.</p>
  */
 public abstract class Task extends DefaultTask {
 
@@ -58,7 +58,12 @@ public abstract class Task extends DefaultTask {
   @OutputFile
   public abstract RegularFileProperty getDestination();
 
-
+  /**
+   * Parses the contents of the file referenced by the {@link #getSource()} return value, replaces
+   * the embedded placeholders with the appropriate table and view names, terminates each statement
+   * with the semicolon (`;`) character and two line breaks, and writes the result to the location
+   * referenced by {@link #getDestination()}.
+   */
   @TaskAction
   public void extract() {
     Project project = getProject();
