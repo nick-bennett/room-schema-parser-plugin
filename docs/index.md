@@ -2,12 +2,11 @@
 title: Overview
 description: What is this plugin for, and what is required to use it?
 nav_order: 1
-last_modified_date: 2022-05-10 12:40:00-0600
 ---
 
 ## Introduction
 
-This project implements a Gradle plugin that extracts DDL from an Android Room SQLite database schema file. It is intended to be declared as a build script dependency in the project-level `build.gradle` file of an Android project, included as a plugin in the `app`- or `library`-module-level `build.gradle` file, and configured in the latter `build.gradle`, as well. 
+This project implements a Gradle plugin that adds a build task to extract DDL from an Android Room SQLite database schema file. It is intended to be declared as a build script dependency in the project-level `build.gradle` file of an Android project, included as a plugin in the `app`- or `library`-module-level `build.gradle` file, and configured in the latter `build.gradle`, as well. 
 
 ## Latest version
 

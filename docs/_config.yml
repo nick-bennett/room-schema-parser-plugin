@@ -54,7 +54,7 @@ heading_anchors: true
 # Aux links for the upper right navigation
 aux_links:
   "Javadocs":
-    - "api/"
+    - "/api/"
   "GitHub":
     - "//github.com/nick-bennett/room-schema-parser-plugin"
 
@@ -75,7 +75,7 @@ back_to_top_text: "Back to top"
 footer_content: "Copyright &copy; 2022 Nicholas Bennett. Distributed using the <a href=\"http://www.apache.org/licenses/LICENSE-2.0\">Apache License, Version 2.0</a>."
 
 # Footer last edited timestamp
-last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
+last_edit_timestamp: false # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
 last_edit_time_format: "%F %T" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
 
 # Footer "Edit this page on GitHub" link text

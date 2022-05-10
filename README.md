@@ -1,6 +1,6 @@
 # Room Schema Parser Plugin
 
-This project implements a Gradle plugin that extracts DDL from an Android Room SQLite database schema file.
+This project implements a Gradle plugin that adds a build task to extract DDL from an Android Room SQLite database schema file.
 
 ## Latest version
 
